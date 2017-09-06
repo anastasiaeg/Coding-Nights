@@ -1,4 +1,4 @@
-package september7;
+package meeting1;
 
 import java.util.Scanner;
 
