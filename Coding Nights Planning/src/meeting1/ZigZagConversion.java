@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 
 /**
  * Coding Nights - Problem #4 Solution
+ * Problem: https://leetcode.com/problems/zigzag-conversion/description/
+ * Number of rows will always be odd
  * @author sriyamadapusivasudevan
  *
  */
@@ -70,7 +72,7 @@ public class ZigZagConversion {
 						}
 					}
 				}
-				
+
 				/*
 				 * Print the matrix going row first
 				 */
