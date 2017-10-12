@@ -12,6 +12,8 @@ import java.io.InputStreamReader;
 public class ZigZagConversion {
 
 	public static void main(String[] args) {
+
+		System.out.print(zigAnastasia("12345678901234567890", 7));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		try {
 			/* The string to be zig-zagged */
@@ -93,4 +95,31 @@ public class ZigZagConversion {
 			e.printStackTrace();
 		}
 	}
+	
+	/** 
+	 * @param word
+	 * @param row
+	 */
+	public static String zigAnastasia(String s, int numRows) {
+
+        char[] array = s.toCharArray();
+        String output = "";
+        if (numRows == 1) return s;
+        for (int i = 0; i < numRows; i++) {
+        	int thing = (numRows - 1 - i) * 2 + i;
+            for (int j = i; j < array.length; j += 2) {
+                if ((j - i) % ((numRows - 1) * 2) == 0) {
+                    output += "\t"+ array[j];
+                } else if (j == thing) {
+                	output += "\t" + array[j];
+                	thing += ((numRows - 1) * 2);
+            	} else {
+            		output += "\t";
+                }
+            }
+            output += "\n";
+        }
+        return output;
+	}
+	
 }
