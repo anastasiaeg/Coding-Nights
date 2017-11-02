@@ -6,7 +6,11 @@ import java.io.InputStreamReader;
 
 public class LongestPrefix {
 
-
+	/**
+	 * Horizontal scanning of the string array
+	 * @param strs
+	 * @return
+	 */
 	public static String longestCommonPrefix(String[] strs) {
 	    if (strs.length == 0) {
 	    		return "";
