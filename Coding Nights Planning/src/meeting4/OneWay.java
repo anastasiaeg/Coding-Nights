@@ -11,6 +11,8 @@ public class OneWay {
 	
 	/**
 	 * O(a + b)
+	 * Find if there is one change required from one string to another. 
+	 * Change can be addition, edit or delete. 
 	 * @param a
 	 * @param b
 	 * @return

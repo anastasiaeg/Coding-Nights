@@ -25,6 +25,11 @@ public class rotateMatrix {
 		}
 	}
 	
+	/**
+	 * Rotate a matrix counterclockwise
+	 * @param matrix
+	 * @return
+	 */
 	public static int[][] rotateCounter(int[][] matrix) {
 		for (int i = 0; i <= matrix.length / 2; i++) {
 			for (int j = 0; j < matrix.length / 2; j++) {
