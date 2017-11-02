@@ -35,7 +35,7 @@ public class LongestPrefix {
 				String[] strArr = line.split(" ");
 				
 				if(strArr.length == 1) {
-					System.out.println("Invalid input. Format: [string],[string]");
+					System.out.println("Invalid input. Format:[string] [string]");
 				} else {
 					String returned = longestCommonPrefix(strArr);
 					if(returned.equals("")) {
