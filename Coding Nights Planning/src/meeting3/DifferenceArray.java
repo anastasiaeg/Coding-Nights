@@ -31,7 +31,7 @@ public class DifferenceArray {
 			hash.put(array[i], true);
 		}
 		for (int i = 0; i < array.length; i++) {
-			if (hash.getOrDefault(array[i] - 2, false)) output++;
+			if (hash.getOrDefault(array[i] - k, false)) output++;
 		}
 		return output;
 	}
