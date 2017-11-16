@@ -4,6 +4,11 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
 
+/**
+ * Sort array of strings ["queen", "apple", queea"] in qwerty
+ * @author anast_000
+ *
+ */
 public class QwertySort {
 	public static void main(String[] args) {
 		String[] sort = {"qween", "apple"};
