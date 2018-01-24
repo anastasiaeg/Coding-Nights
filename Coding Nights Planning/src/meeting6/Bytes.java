@@ -2,10 +2,10 @@ package meeting6;
 import java.util.*;
 import java.util.regex.Pattern;
 
-public class Bites {
+public class Bytes {
 	public static void main(String[] args) {
-		System.out.println(solution("my.song.mp3 11b\ngreatSong.flac 1000b\nnot3.txt 5b\n" + 
-				"video.mp4 200b\ngame.exe 100b\nmov!e.mkv 10000b"));
+		System.out.println(solution("my.song.mp3 11\ngreatSong.flac 1000\nnot3.txt 5\n" + 
+				"video.mp4 200\ngame.exe 100\nmov!e.mkv 10000"));
 	}
 	
 	public static String solution(String S) {
@@ -15,19 +15,18 @@ public class Bites {
         while (s.hasNextLine()) {
         	StringTokenizer file = new StringTokenizer(s.nextLine(), " ");
         	String name = file.nextToken();
-        	StringTokenizer bytes = new StringTokenizer(file.nextToken(), "b");
-        	int bites = Integer.parseInt(bytes.nextToken());
+        	int bytes = Integer.parseInt(file.nextToken());
         	
         	if (Pattern.matches("\\S+(.mp3|.aac|.flac)$", name)) {
-        		music += bites;
+        		music += bytes;
         	} else if (Pattern.matches("\\S+(.jpg|.bmp|.gif)$", name)) {
-        		image += bites;
+        		image += bytes;
         	} else if (Pattern.matches("\\S+(.mp4|.avi|.mkv)$", name)) {
-        		movie += bites;
+        		movie += bytes;
         	} else {
-        		other += bites;
+        		other += bytes;
         	}
         }
-        return "music " + music + "b\nimages " + image + "b\nmovies " + movie + "b\nother " + other + "b";
+        return "music " + music + "\nimages " + image + "\nmovies " + movie + "\nother " + other;
     }
 }
