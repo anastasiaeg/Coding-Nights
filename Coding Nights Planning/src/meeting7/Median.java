@@ -3,15 +3,21 @@ package meeting7;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
+/**
+ * Find the median of random integers array
+ * @author anast_000
+ *
+ */
 public class Median {
 	public static void main(String[] args) {
-		int[] randomInts = new int[500];
-		for (int i = 0; i < 500; i++) {
+		int[] randomInts = new int[(int)(Math.random() * 100)];
+		for (int i = 0; i < randomInts.length; i++) {
 			randomInts[i] = (int)(Math.random()*10000);
 		}
 		
 		int[] check = {0, 5, 8, 9, -2};
-		System.out.println("Median of this array is " + medianHard(check));
+		System.out.println("Median of array " + Arrays.toString(check) + "\nis " + medianEasy(check));
+		System.out.println("Median of array " + Arrays.toString(randomInts) + "\nis " + medianHard(randomInts));
 	}
 	
 	/**
@@ -20,12 +26,15 @@ public class Median {
 	 * @return
 	 */
 	public static double medianEasy(int[] array) {
+		//Precautions
+		if (array == null) return 0;
+		if (array.length == 0) return 0;
 		Arrays.sort(array);
 		return array.length % 2 == 0? (double)(array[array.length / 2] + array[array.length / 2 - 1]) / 2: array[array.length / 2];
 	}
 	
 	/**
-	 * O(n)!!
+	 * O(n)!! but worse memory wise because we're creating two priority queues
 	 */
 	public static double medianHard(int[] array) {
 		//Precautions
@@ -45,4 +54,5 @@ public class Median {
 		}
 		return (double)(min.poll() + max.poll()) / 2;
 	}
+	
 }
