@@ -19,7 +19,7 @@ public class KnightsTour {
 				{0,0,0,0,0,0,0,0}
 		};
 		
-		// 8 possible moves:
+	// 8 possible moves:
         // Move 0: horizontal[ 0 ] = 2 vertical[ 0 ] = -1
         // Move 1: horizontal[ 1 ] = 1 vertical[ 1 ] = -2
         // Move 2: horizontal[ 2 ] = -1 vertical[ 2 ] = -2
