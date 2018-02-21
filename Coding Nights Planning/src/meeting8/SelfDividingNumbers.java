@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class SelfDividingNumbers {
 	public static void main(String[] args) {
-		//[1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22]
+		//[1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22] 
 		System.out.println(selfDividingNumbers(1, 22));
 	}
 	
