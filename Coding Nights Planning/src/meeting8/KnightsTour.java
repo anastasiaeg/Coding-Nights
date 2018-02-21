@@ -29,7 +29,7 @@ public class KnightsTour {
         // Move 6: horizontal[ 6 ] = 1 vertical[ 6 ] = 2
         // Move 7: horizontal[ 7 ] = 2 vertical[ 7 ] = 1
 		
-		int[] horizontal = { 2, 1, -1, -2, -2, -1, 1, 2 };
+	int[] horizontal = { 2, 1, -1, -2, -2, -1, 1, 2 };
         int[] vertical = { -1, -2, -2, -1, 1, 2, 2, 1 };
         int currentRow, currentColumn;
         
