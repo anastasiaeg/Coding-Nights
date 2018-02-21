@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class KnightsTourHeuristic {
 	
-	 public final static int ROW = 8;
+     public final static int ROW = 8;
      public final static int COL = 8;
      public static boolean exit = false;
      
@@ -83,8 +83,6 @@ public class KnightsTourHeuristic {
              }
 
              chessboard[currentRow][currentColumn] = counter;
-           
-
          }
 
          // print Chessboard
@@ -151,7 +149,6 @@ public class KnightsTourHeuristic {
 
          // if no more valid moves, move variable will not be updated and will be negative
          return move;
-     }
-        	      
-	}
+     }      	      
+}
 	
