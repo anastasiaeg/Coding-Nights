@@ -3,7 +3,7 @@ package meeting8;
 import java.util.Random;
 import java.util.Scanner;
 
-public class test {
+public class MiniMaxSum {
 	
 	static void miniMaxSum(int[] arr) {
         // initialize min and max to first 4 numbers. If we find a sum smaller or greater than min/max, update

@@ -4,6 +4,8 @@ import java.util.HashSet;
 import java.util.Stack;
 
 /**
+ * Given 15 7 1 1 + − ÷ 3 × 2 1 1 + + −
+ * That means ((15 ÷ (7 − (1 + 1))) × 3) − (2 + (1 + 1))
  * 
  * @author anast_000
  *
@@ -15,11 +17,11 @@ public class CalculateRPN {
 		hs = new HashSet<String>();
 		hs.add("+"); hs.add("-"); hs.add("*"); hs.add("/");
 		String[] rpn = {"15", "7", "1", "1", "+", "-", "/", "3", "*", "2", "1", "1", "+", "+", "-"};
-		System.out.println(fromRPN(rpn));
+		System.out.println(calculate(rpn));
 	}
 	
 	
-	public static String fromRPN(String[] rpn) {
+	public static String calculate(String[] rpn) {
 		Stack<String> s = new Stack<String>();
 		for (int i = 0; i < rpn.length; i++) {
 			if (hs.contains(rpn[i])) {
@@ -42,4 +44,5 @@ public class CalculateRPN {
 		}
 		return "" + s.pop();
 	}
+	
 }
