@@ -5,7 +5,7 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-public class Solution {
+public class IceCreamParlour {
 
     static int[] icecreamParlor(int m, int[] arr) {
      int[] result = new int[2];
